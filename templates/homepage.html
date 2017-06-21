@@ -4,28 +4,25 @@
 
 <h2>Signup</h2>
 
-<form action="/">
+<form action = '/validate' method="POST">
     <div><label>
         Username:
         <input type="text" name="username"/>
     </label>
-    <span class="error"></span> </div>
+    <span class="error">{{ error1 }}</span> </div>
     <div><label>
         Password:
         <input type="password" name="password"/>
-    </label><span class="error"></span></div>
+    </label><span class="error">{{ error2 }}</span></div>
     <div><label>
         Confirm Password:
         <input type="password" name="confirm_password"/>
-    </label><span class="error"></span></div>
+    </label><span class="error">{{ error3 }}</span></div>
     <div><label>
-        Email Adrress (Optional):
+        Email Address (Optional):
         <input type="text" name="email_address"/>
-    </label><span class="error"></span></div>
+    </label><span class="error">{{ error4 }}</span></div>
         <div><input type="submit" value="Submit"/></div>
 </form>
 
-{% if error %}
-  <p class='error'>{{ error }}</p>
-{% endif %}
 {% endblock %}
